@@ -5,48 +5,6 @@ package circulo;
  * @author A21YagoVR
  */
 public class Aro {
-
-    /**
-     * @return the coordenadaX
-     */
-    public int getCoordenadaX() {
-        return coordenadaX;
-    }
-
-    /**
-     * @param coordenadaX the coordenadaX to set
-     */
-    public void setCoordenadaX(int coordenadaX) {
-        this.coordenadaX = coordenadaX;
-    }
-
-    /**
-     * @return the coordenadaY
-     */
-    public int getCoordenadaY() {
-        return coordenadaY;
-    }
-
-    /**
-     * @param coordenadaY the coordenadaY to set
-     */
-    public void setCoordenadaY(int coordenadaY) {
-        this.coordenadaY = coordenadaY;
-    }
-
-    /**
-     * @return the radio
-     */
-    public double getRadio() {
-        return radio;
-    }
-
-    /**
-     * @param radio the radio to set
-     */
-    public void setRadio(double radio) {
-        this.radio = radio;
-    }
     public static final double MINIMO = 0.0;
 
     private int coordenadaX;
@@ -63,32 +21,32 @@ public class Aro {
     }
 
     public void establecerX(int valorX) {
-        setCoordenadaX(valorX);
+        coordenadaX=valorX;
     }
 
     public int obterX() {
-        return getCoordenadaX();
+        return coordenadaX;
     }
 
     public void establecerY(int valorY) {
-        setCoordenadaY(valorY);
+        coordenadaY=valorY;
     }
 
     public int obterY() {
-        return getCoordenadaY();
+        return coordenadaY;
     }
 
     public void establecerRadio(double valorRadio) {
 
-        setRadio(valorRadio < MINIMO ? MINIMO : valorRadio);
+        radio=(valorRadio < MINIMO ? MINIMO : valorRadio);
     }
 
     public double obterRadio() {
-        return getRadio();
+        return radio;
     }
 
     public double obterDiametro() {
-        return getRadio() * 2;
+        return radio * 2;
     }
 
     public double obterCircunferencia() {
@@ -96,36 +54,16 @@ public class Aro {
     }
 
     public double obterSuperficie() {
-        return Math.PI * getRadio() * getRadio();
+        return Math.PI * radio * radio;
     }
 
     @Override
     public String toString() {
-        return "Centro = [" + getCoordenadaX() + "," + getCoordenadaY() + "]; Radio = " + getRadio();
+        return "Centro = [" + coordenadaX + "," + coordenadaY + "]; Radio = " + radio;
     }
 
     public void trasladarCentro(int trasladarx, int trasladary){
-        setCoordenadaX(getCoordenadaX() + trasladarx);
-        setCoordenadaY(getCoordenadaY() + trasladary);
+        coordenadaX=coordenadaX + trasladarx;
+        coordenadaY=coordenadaY + trasladary;
     }
-    private double LIMITERADIO = 0.0;
-
-    /**
-     * Get the value of LIMITERADIO
-     *
-     * @return the value of LIMITERADIO
-     */
-    public double getLIMITERADIO() {
-        return LIMITERADIO;
-    }
-
-    /**
-     * Set the value of LIMITERADIO
-     *
-     * @param LIMITERADIO new value of LIMITERADIO
-     */
-    public void setLIMITERADIO(double LIMITERADIO) {
-        this.LIMITERADIO = LIMITERADIO;
-    }
-
 }
