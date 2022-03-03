@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
- * @author profesor
+ * @author A21YagoVR
  */
 public class CirculoTest {
     
