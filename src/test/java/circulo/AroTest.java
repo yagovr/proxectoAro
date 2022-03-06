@@ -147,5 +147,40 @@ public class AroTest {
         assertEquals(resultx+5, resultnx);
         assertEquals(resulty+6, resultny);
     }
+
+    /**
+     * Test of toString method, of class Aro.
+     */
+    @Test
+    public void testToString() {
+        System.out.println("toString");
+        Aro instance = new Aro(37,43,2.5);
+        String expResult = "Centro = [" + 37 + "," + 43 + "]; Radio = " + 2.5;
+        String result = instance.toString();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getLIMITERADIO method, of class Aro.
+     */
+    @Test
+    public void testGetLIMITERADIO() {
+        System.out.println("getLIMITERADIO");
+        Aro instance = new Aro();
+        double expResult = 0.0;
+        double result = instance.getLIMITERADIO();
+        assertEquals(expResult, result, 0.0);
+    }
+
+    /**
+     * Test of setLIMITERADIO method, of class Aro.
+     */
+    @Test
+    public void testSetLIMITERADIO() {
+        System.out.println("setLIMITERADIO");
+        double LIMITERADIO = 0.0;
+        Aro instance = new Aro();
+        instance.setLIMITERADIO(LIMITERADIO);
+    }
     
 }
