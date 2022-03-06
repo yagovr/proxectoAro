@@ -7,7 +7,8 @@ package circulo;
 public class Aro {
 
     /**
-     * @return Devolve a Coordenada X
+     * Devolve a coordenada X
+     * @return 
  
      */
     public int getCoordenadaX() {
@@ -15,14 +16,16 @@ public class Aro {
     }
 
     /**
-     * @param coordenadaX Establece a Coordenada X
+     * Establece a Coordenada X
+     * @param coordenadaX 
      */
     public void setCoordenadaX(int coordenadaX) {
         this.coordenadaX = coordenadaX;
     }
 
     /**
-     * @return Devolve a Coordenada Y
+     * Devolve a Coordenada Y
+     * @return 
 
      */
     public int getCoordenadaY() {
@@ -30,7 +33,8 @@ public class Aro {
     }
 
     /**
-     * @param coordenadaY Establece a Coordenada Y
+     * Establece a Coordenada Y
+     * @param coordenadaY 
 
      */
     public void setCoordenadaY(int coordenadaY) {
@@ -38,29 +42,34 @@ public class Aro {
     }
 
     /**
-     * @return Devolve o Radio
-
+     * Devolve o Radio
+     * @return 
      */
     public double getRadio() {
         return radio;
     }
 
     /**
-     * @param radio Establece o Radio, "se o radio e negativo establecese o valor 0"
-
+     * Establece o Radio, "se o radio e negativo establecese o valor 0"
+     * @param radio 
      */
     public void setRadio(double radio) {
         this.radio = radio < MINIMO ? MINIMO : radio;
     }
+    /**
+     * Establecese que o dato MINIMO de tipo double e igual a 0.0     */
     public static final double MINIMO = 0.0;
     
     /**
      * Declaranse as variables e o tipo de dato de cada una
+     * @return
      */
     private int coordenadaX;
     private int coordenadaY;
     private double radio; 
-
+    /**
+     * Constructor por defecto
+     */
     public Aro() {
     }
     
@@ -77,25 +86,29 @@ public class Aro {
         radio = valorRadio;
     }
     /**
-     * @return Obtense o Radio e multiplicase por 2 para obter o diametro
+     * Obtense o Radio e multiplicase por 2 para obter o diametro
+     * @return 
      */
     public double obterDiametro() {
         return getRadio() * 2;
     }
     /**
-     * @return Obtense a circunferencia apartir do diametro
+     * Obtense a circunferencia apartir do diametro
+     * @return 
      */
     public double obterCircunferencia() {
         return Math.PI * obterDiametro();
     }
     /**
-     * @return Calculase a superficie do Aro, ,ultiplicando PI polo radio 2 veces
+     * Calculase a superficie do Aro, ,ultiplicando PI polo radio 2 veces
+     * @return 
      */
     public double obterSuperficie() {
         return Math.PI * getRadio() * getRadio();
     }
     /**
-     * @return Devolve o String cos datos do Aro
+     * Devolve o String cos datos do Aro
+     * @return 
      */
     @Override
     public String toString() {
@@ -117,17 +130,16 @@ public class Aro {
     private double LIMITERADIO = 0.0;
 
     /**
-     * Get the value of LIMITERADIO
-     *
-     * @return Devolve o valor de LIMITERADIO
+     * Devolve o valor de LIMITERADIO
+     * @return 
      */
     public double getLIMITERADIO() {
         return LIMITERADIO;
     }
 
     /**
-     *
-     * @param LIMITERADIO Establece o valor para LIMITERADIO
+     *Establece o valor para LIMITERADIO
+     * @param LIMITERADIO 
      */
     public void setLIMITERADIO(double LIMITERADIO) {
         this.LIMITERADIO = LIMITERADIO;
