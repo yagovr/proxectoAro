@@ -7,48 +7,47 @@ package circulo;
 public class Aro {
 
     /**
-     * Devolve a Coordenada X
-     * @return 
+     * @return Devolve a Coordenada X
+ 
      */
     public int getCoordenadaX() {
         return coordenadaX;
     }
 
     /**
-     * Establece a Coordenada X
-     * @param coordenadaX
+     * @param coordenadaX Establece a Coordenada X
      */
     public void setCoordenadaX(int coordenadaX) {
         this.coordenadaX = coordenadaX;
     }
 
     /**
-     * Devolve a Coordenada Y
-     * @return 
+     * @return Devolve a Coordenada Y
+
      */
     public int getCoordenadaY() {
         return coordenadaY;
     }
 
     /**
-     * Establece a Coordenada Y
-     * @param coordenadaY
+     * @param coordenadaY Establece a Coordenada Y
+
      */
     public void setCoordenadaY(int coordenadaY) {
         this.coordenadaY = coordenadaY;
     }
 
     /**
-     * Devolve o Radio
-     * @return 
+     * @return Devolve o Radio
+
      */
     public double getRadio() {
         return radio;
     }
 
     /**
-     * Establece o Radio, "se o radio e negativo establecese o valor 0"
-     * @param radio
+     * @param radio Establece o Radio, "se o radio e negativo establecese o valor 0"
+
      */
     public void setRadio(double radio) {
         this.radio = radio < MINIMO ? MINIMO : radio;
